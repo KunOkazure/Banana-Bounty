@@ -1,117 +1,35 @@
-repeat wait()
-until game:IsLoaded()
-local TableChat = {""}
-spawn(function()
-    while wait() do
-        pcall(function()
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(TableChat[math.random(1,#TableChat)],"All")
-            wait(45)
-        end)
-    end
-end)
-getgenv().Setting = {
-    ["Team"] = "Pirates", --Marines,Pirates
-    ["Webhook"] = {
-        ["Enabled"] = true,
-        ["Url Webhook"] = "", --Your Url
-    },
-    ["Misc"] = {
-        ["AutoBuyRandomandStoreFruit"] = true,
-        ["AutoBuySurprise"] = true,
-    },
-    ["Click"] = {
-        ["Enable"] = true,
-        ["Click Gun"] = true,
-        ["OnLowHealthDisable"] = true,
-        ["LowHealth"] = 3000,
-    },
-    ["SafeZone"] = {
-        ["Enable"] = true,
-        ["LowHealth"] = 4500,
-        ["MaxHealth"] = 5000,
-        ["Teleport Y"] = 2000
-    },
-    ["Race V4"] = {
-        ["Enable"] = true,
-    },
-    ["Invisible"] = false,
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().SettingFarm ={
+    ["GodHuman"] = true,
+    ["Priority Get Melee Sea 3"] = false,
+    ["Auto Saber"] = true,
+    ["Auto Pole"] = true,
+    ["Cursed Dual Katana"] = true,
+    ["SoulGuitar"] = true,
+    ["Shark Anchor"] = true, --i have cdk and god and soulguitar
+    ["Farm Mastery Fruit If Lvl Max"] = false,
+    ["Hop Fruit 1M Quest Third Sea"] = false,
     ["White Screen"] = false,
-    ["GunMethod"] = false, --Support Only Melee And Gun,Not Invisible, Turn On Enabled Gun and Melee Please
-    ["SpamSkill"] = false, -- Will use all skills as fast as possbile ignore holding skills
-    ["Weapons"] = {
-        ["Melee"] = {
-            ["Enable"] = true,
-            ["Delay"] = 3,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0.2,
-                },
-               [ "X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0.1,
-                },
-                ["C"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 2,
-                },
-            },
-        },
-        ["Blox Fruit"] = {
-            ["Enable"] = false,
-            ["Delay"] = 1,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-                ["X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-                ["C"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-                ["V"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-                ["F"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0,
-                },
-            },
-        },
-        ["Gun"] = {
-            ["Enable"] = true,
-            ["Delay"] = 2,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0.7,
-                },
-                ["X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0.7,
-                },
-            },
-        },
-        ["Sword"] = {
-            ["Enable"] = true,
-            ["Delay"] = 1,
-            ["Skills"] = {
-                ["Z"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 1.5,
-                },
-                ["X"] = {
-                    ["Enable"] = true,
-                    ["HoldTime"] = 0.5,
-                },
-            },
-        },
+    ["Hop if Near Farm Area"] = true,
+    ["Auto Race V2-V3"] = true,
+    ["Race"] = {
+        ["Enabled"] = false,
+        ["Auto Roll Race"] = false,
+        ["Select Race"] =  "", -- Human, Mink, Fishman
+    },
+    ["Buy Haki"] = {
+        ["Enhancement"] = false,
+        ["Skyjump"] = true,
+        ["Flash Step"] = true,
+        ["Observation"] = true,
+    },
+    ["Blox Fruit Sniper"] = {},
+    ["Lock Fruit"] = {},
+    ["Webhook"] = {
+        ["Enabled"] = false,
+        ["WebhookUrl"] = "",
     }
 }
-repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BountyShit.lua"))()
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-kaitunBF.lua"))()
